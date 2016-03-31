@@ -1,0 +1,15 @@
+version: '2'
+services:
+    olivebird-app:
+        image: olivebird
+        external_links:
+            - olivebird-postgresql:postgresql
+        environment:
+            - SPRING_PROFILES_ACTIVE=prod
+            - SPRING_DATASOURCE_URL=jdbc:postgresql://postgresql:5432/olivebird
+        ports:
+            - 8080:8080
+    olivebird-postgresql:
+        extends:
+            file: postgresql.yml
+            service: olivebird-postgresql

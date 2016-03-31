@@ -1,0 +1,26 @@
+{
+  "generator-jhipster": {
+    "jhipsterVersion": "3.0.0",
+    "baseName": "olivebird",
+    "packageName": "com.ioneyedsolutions.olivebird",
+    "packageFolder": "com/ioneyedsolutions/olivebird",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "hibernateCache": "ehcache",
+    "clusteredHttpSession": "no",
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "searchEngine": "no",
+    "buildTool": "gradle",
+    "enableSocialSignIn": true,
+    "jwtSecretKey": "9f525a63081848c6f82254e71ce45fdda8193f07",
+    "useSass": true,
+    "applicationType": "monolith",
+    "testFrameworks": [
+      "gatling"
+    ],
+    "enableTranslation": false
+  }
+}

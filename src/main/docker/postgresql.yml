@@ -1,0 +1,12 @@
+version: '2'
+services:
+    olivebird-postgresql:
+        container_name: olivebird-postgresql
+        image: postgres:9.5.1
+        # volumes:
+        #     - ~/volumes/jhipster/olivebird/postgresql/:/var/lib/postgresql/
+        environment:
+            - POSTGRES_USER=olivebird
+            - POSTGRES_PASSWORD=
+        ports:
+            - 5432:5432
