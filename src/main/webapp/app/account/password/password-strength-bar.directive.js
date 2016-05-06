@@ -28,7 +28,8 @@
 
         function linkFunc(scope, iElement) {
             var strength = {
-                colors: ['#F00', '#F90', '#FF0', '#9F0', '#0F0'],
+                
+            	colors: ['#F00', '#F90', '#FF0', '#9F0', '#0F0'],
                 mesureStrength: function (p) {
 
                     var _force = 0;
@@ -43,8 +44,10 @@
                     var _passedMatches = $.grep(_flags, function (el) {
                         return el === true;
                     }).length;
-
+// var i=0; i += 1 === i= i+1
+                    // 0 += 2 * 3 + (0)
                     _force += 2 * p.length + ((p.length >= 10) ? 1 : 0);
+                    // 6 += 3*10 == 36
                     _force += _passedMatches * 10;
 
                     // penality (short password)
@@ -88,6 +91,10 @@
                         .css({ 'background-color': '#DDD' })
                         .slice(0, c.idx)
                         .css({ 'background-color': c.col });
+                }else {
+                	if (!iElement.hasClass('ng-hide')){
+                		iElement.addClass('ng-hide');
+                	}
                 }
             });
         }
